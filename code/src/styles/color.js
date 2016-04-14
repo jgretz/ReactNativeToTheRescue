@@ -1,0 +1,43 @@
+export const Color = {
+  CLEAR: 'rgba(0,0,0,0)',
+  WHITE: '#fff',
+  WHITE_LILAC: '#e8e9eb',
+  BOMBAY: '#B2B5B8',
+  ALUMINUM: '#84888B',
+  ABBEY: '#4F5153',
+  BLACK: '#2b2c2e',
+
+  ELECTRIC_BLUE: '#0096DB',
+  RED_BERRY: '#782327',
+
+  FLAMINGO: '#F05A2B',
+  TULIP_TREE: '#EEAF33',
+  RIO_GRANDE: '#BED600',
+  CHRISTI: '#68AD16',
+  PURPLE_HEART: '#7230A6',
+  VIVID_CERISE: '#DD1B85',
+};
+
+export const Shade = {
+  ELECTRIC_BLUE: '#0080bb',
+  RED_BERRY: '#5a1115',
+
+  FLAMINGO: '#D84815',
+  TULIP_TREE: '#DA9D20',
+  RIO_GRANDE: '#ACC200',
+  CHRISTI: '#58990A',
+  PURPLE_HEART: '#5B168D',
+  VIVID_CERISE: '#BF086B',
+};
+
+export const Tint = {
+  ELECTRIC_BLUE: '#20aeef',
+  RED_BERRY: '#ac565a',
+
+  FLAMINGO: '#FF855E',
+  TULIP_TREE: '#FFC756',
+  RIO_GRANDE: '#D4EA29',
+  CHRISTI: '#84C736',
+  PURPLE_HEART: '#9A58CD',
+  VIVID_CERISE: '#F468B4',
+};
