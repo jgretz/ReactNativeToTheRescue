@@ -1,12 +1,11 @@
 // imports
-import React, { View, ListView, Text } from 'react-native';
+import React, { Component, View, ListView, Text } from 'react-native';
 import { connect } from 'react-redux';
 
-import { createStyle } from '../../styles';
-import { SelfBindingComponent } from '../../support';
+import { createStyle, Color } from '../../styles';
 
 // class
-class Home extends SelfBindingComponent {
+class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -52,10 +51,12 @@ const styles = createStyle({
     backgroundColor: '#CCCCCC',
   },
   sessionTitle: {
-    fontSize: 16
+    fontSize: 16,
+    color: Color.PURPLE_HEART
   },
   speaker: {
-    fontSize: 12
+    fontSize: 13,
+    color: Color.BLACK
   }
 });
 

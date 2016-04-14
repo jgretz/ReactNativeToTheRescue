@@ -5,11 +5,11 @@ import _ from 'underscore';
 
 import {createStyle} from '../../styles';
 import {Main} from '../../routing';
+import {Spinner} from '../controls';
 import {getSessionInfo} from '../../actions';
-import {SelfBindingComponent} from '../../support';
 
 // class
-class Loading extends SelfBindingComponent {
+class Loading extends Component {
   load() {
     return Promise.all([
       this.props.getSessionInfo()
@@ -25,6 +25,7 @@ class Loading extends SelfBindingComponent {
   render() {
     return (
       <View style={[styles.container, styles.loading]}>
+        <Spinner spinnerIsVisible={true} />
       </View>
     );
   }

@@ -1,3 +1,4 @@
-import HostFunc from './src/host';
+import { AppRegistry } from 'react-native';
+import Host from './src/host';
 
-HostFunc();
+AppRegistry.registerComponent('conf', () => Host);
