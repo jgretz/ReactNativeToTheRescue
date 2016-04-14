@@ -22,15 +22,16 @@ class Home extends SelfBindingComponent {
         style={[styles.container, styles.screen, styles.listView]}
         dataSource={this.state.dataSource}
         renderRow={this.renderSession}
-        renderSeparator={this.renderSeparator} />
+        renderSeparator={this.renderSeparator}
+        pageSize={10} />
     );
   }
 
   renderSession(session) {
     return (
       <View key={session.index}>
-        <Text>{session.session}</Text>
-        <Text>{session.speaker}</Text>
+        <Text style={styles.sessionTitle}>{session.session}</Text>
+        <Text style={styles.speaker}>{session.speaker}</Text>
       </View>
     );
   }
@@ -49,6 +50,12 @@ const styles = createStyle({
   separator: {
     height: 1,
     backgroundColor: '#CCCCCC',
+  },
+  sessionTitle: {
+    fontSize: 16
+  },
+  speaker: {
+    fontSize: 12
   }
 });
 
