@@ -1,5 +1,5 @@
 // imports
-import React, { Component, View, Text } from 'react-native';
+import React, { View, ListView, Text } from 'react-native';
 import { connect } from 'react-redux';
 
 import { createStyle } from '../../styles';
@@ -7,35 +7,57 @@ import { SelfBindingComponent } from '../../support';
 
 // class
 class Home extends SelfBindingComponent {
+  constructor(props) {
+    super(props);
+
+    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    this.state = {
+      dataSource: ds.cloneWithRows(this.props.sessions)
+    };
+  }
+
   render() {
     return (
-      <View style={[styles.container, styles.screen]}>
-        <View style={[styles.container, styles.contentContainer, styles.bestAction, styles.contentHold]}>
-          <Text>Next Best Action</Text>
-        </View>
-        <View style={[styles.container, styles.contentContainer, styles.contentHold]}>
-          <Text>Consistent Calls to Actions</Text>
-        </View>
-        <View style={[styles.container, styles.contentContainer, styles.contentHold]}>
-          <Text>Urgent Alerts and Updates</Text>
-        </View>
+      <ListView
+        style={[styles.container, styles.screen, styles.listView]}
+        dataSource={this.state.dataSource}
+        renderRow={this.renderSession}
+        renderSeparator={this.renderSeparator} />
+    );
+  }
+
+  renderSession(session) {
+    return (
+      <View key={session.index}>
+        <Text>{session.session}</Text>
+        <Text>{session.speaker}</Text>
       </View>
-    )
+    );
+  }
+
+  renderSeparator(sectionID, rowID) {
+    return <View key={`${sectionID}-${rowID}`} style={styles.separator} />;
   }
 }
 
 // styles
 const styles = createStyle({
-  bestAction: {
-    flex: 2
+  listView: {
+    marginLeft: 10,
+    marginRight: 10
   },
-  contentHold: {
-    alignSelf: 'stretch',
-
-    borderWidth: 1,
-    borderColor: '#000'
+  separator: {
+    height: 1,
+    backgroundColor: '#CCCCCC',
   }
 });
 
+// mapStateToProps
+const mapStateToProps = (state) => {
+  return {
+    sessions: state.sessions
+  };
+};
+
 // export
-export default connect()(Home);
+export default connect(mapStateToProps)(Home);

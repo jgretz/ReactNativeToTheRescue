@@ -8,7 +8,8 @@ export default {
   },
 
   screen: {
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    marginTop: 60
   },
 
   label: {
