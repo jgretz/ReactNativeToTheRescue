@@ -4,4 +4,7 @@ Users want their apps to be intuitive and enjoyable - seamlessly designed for th
 
 React Native promises to answer these needs without the compromise. In this talk, we will explore how React Native empowers developers to create truly native apps that are delightful to use, while answering the real needs of business. Using the canvas of a cross platform app, we will walk through how React Native's approach enables quick and enjoyable development, reduces cost and complexity, and produces an experience with the same finesse as native development. Come see if React Native can rescue you from compromise.
 
-## Pitch
+## Short (<1024)
+Users want their apps to be intuitive - designed for their device. Developers want powerful tools that enable them to craft their vision into reality. Businesses want to reduce time to market, cost, and risk. In mobile development these needs conflict, inevitably leading to someone losing. Many tools have tried, yet none have solved the problem without compromise. Either users give up their native experience, developers are hindered by subpar tools, or businesses are forced to increase time, cost, and risk. We need to do better.
+
+React Native promises to answer these needs without the compromise. In this talk, we will explore how React Native empowers developers to create native apps that are delightful to use and answer the real needs of business. Using the canvas of a cross platform app, we will walk through how React Native's approach enables enjoyable development, reduces cost and complexity, and produces an experience akin to native development. Come see if React Native can rescue you from compromise.
