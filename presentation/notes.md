@@ -50,18 +50,19 @@ React Native History
 Others Opinions
 
 ## Slide 11
+Getting started
+
+## Slide 12
 Editors
 
-* Transition to the basics
-
-## Slide 12,13
+## Slide 13,14
 Project Setup
 
 * Discuss CLI
 * react-native init <Project name>
   * Can take a while (like 5 or more minutes)
 
-## Slide 14
+## Slide 15
 ### Demo - Tag 0
 
 #### Step 1
@@ -79,11 +80,11 @@ Project Setup
 
 ----------------
 
-## Slide 15
+## Slide 16
 * Lets dive in
 * I'm a developer, its the foundation, lets start there
 
-## Slide 16
+## Slide 17
 ES6
 
 * note the following:
@@ -92,7 +93,7 @@ ES6
   * class <> extends
   * import / export  
 
-## Slide 17
+## Slide 18
 ### Demo - Tag 0 cont ...
 
 #### Step 1
@@ -130,16 +131,16 @@ ES6
 * show Debugger
   * cmd-m on android
 
-## Slide 18
+## Slide 19
 JSX - Sample
 
-## Slide 19
+## Slide 20
 JSX - Meme
 
-## Slide 20
+## Slide 21
 JSX - Good points
 
-## Slide 21
+## Slide 22
 ### Demo - Tag 1
 
 ### Step 1
@@ -200,21 +201,21 @@ const bgColor = { backgroundColor: this.state.colors[this.state.bgColorIndex] };
 ```
 * quit / reopen - show & correct all the errors that now get created
 
-## Slide 22
+## Slide 23
 HMR
 
 * Corey House codemash story - KILLER feature
 * Relatively new to React native, stable around April 2016
 * Allows design and development to collaborate quickly, reduce risk
 
-## Slide 23
+## Slide 24
 HMR Diagram - file system
 
-## Slide 24
+## Slide 25
 HMR Diagram - In Memory
 * Maintains state while re-applying code (calls render after code is hotswapped)
 
-## Slide 25
+## Slide 26
 ### Demo - Tag 2
 * enable hot reload from dev menu
 * change the refresh time - explain again that a constructor wouldnt be called because of how HMR works
@@ -226,23 +227,23 @@ HMR Diagram - In Memory
 
 -------------------
 
-## Slide 26
+## Slide 27
 Mental Clarity
 Webster defines mental health as an appropriate balance of love, work, and leisure pursuits
 
 Our code contributes to this and adheres to this
 
 
-## Slide 27
+## Slide 28
 Talk about clear code and why it matters
 
 * Look at this code from js
 * Look at this code from python (will hit the else because of type equality)
 
-## Slide 28
+## Slide 29
 Simplify until needed, be intentional about added complexity
 
-## Slide 29
+## Slide 30
 ### Demo - Tag 3
 
 ### Step 1
@@ -333,20 +334,20 @@ ItemList.propTypes = {
 ```
 * Simplify host
 
-## Slide 30
+## Slide 31
 Unidirectional data flow - Flux
 
 * Mention immutability
 * Mention Redux
 * Talk about why its simpler - and mention nightmares of two-way databinding
 
-## Slide 31
+## Slide 32
 Flux flow
 
-## Slide 32
+## Slide 33
 Flux flow part 2
 
-## Slide 33
+## Slide 34
 ### DEMO - Tag 4
 
 * Add inputText to state
@@ -407,22 +408,22 @@ onButtonPress = () => {
 }
 ```
 
-## Slide 34
+## Slide 35
 Redux
 Redux Form
 Redux Observable
 
 -------------------
 
-## Slide 35
+## Slide 36
 Cross platform - oh yeah that :)
 * So we have already seen shared code
 * show current state running in both
 
-## Slide 36
+## Slide 37
 Cover all the ways you can support cross plaform
 
-## Slide 37
+## Slide 38
 ### Demo - Tag 5
 
 #### Step 1 - Show Platform again
@@ -438,20 +439,20 @@ Cover all the ways you can support cross plaform
 
 -------------------
 
-## Slide 38
+## Slide 39
 One more thing - a couple of tools that
 can make you faster and better looking
 
-## Slide 39
+## Slide 40
 BuddyBuild
 
-## Slide 40
+## Slide 41
 CodePush
 
-## Slide 41
+## Slide 42
 Pepperoni
 
 -------------------
 
-## Slide 42
+## Slide 43
 Thank you
