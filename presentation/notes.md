@@ -224,44 +224,219 @@ HMR Diagram - In Memory
 
 -------------------
 
-## Slide 24
-Clarity - why its important
+## Slide 26
+Mental Clarity
+Webster defines mental health as an appropriate balance of love, work, and leisure pursuits
 
-## Slide 18
+Our code contributes to this and adheres to this
+
+
+## Slide 27
+Talk about clear code and why it matters
+
+* Look at this code from js
+* Look at this code from python (will hit the else because of type equality)
+
+## Slide 28
 Simplify until needed, be intentional about added complexity
 
-## Slide 18
-ES6
+## Slide 29
+### Demo - Tag 3
 
-## Slide 19
-TODO: Unidirectional data flow
-Flux
+### Step 1
+* Talk about what we are doing now (to do list)
+* Talk about breaking this view into its parts
+
+* Add controls directory and index
+  * talk about export from here and why
+
+* Extract Button
+  * talk about why we are exporting const and not default
+  * talk about how we pass things in (onPress and text)
+  * talk about PropTypes
+```
+import React, { PropTypes } from 'react';
+import { StyleSheet, View, Text, TouchableHighlight } from 'react-native';
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#000',
+    borderRadius: 22.5,
+    width: 220,
+    height: 45,
+    marginBottom: 12,
+  },
+  contentView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    fontSize: 17,
+    color: '#fff',
+  },
+});
+
+export const Button = props =>
+  <TouchableHighlight style={styles.button} onPress={props.onPress}>
+    <View style={styles.contentView}>
+      <Text style={styles.buttonText}>
+        {props.children}
+      </Text>
+    </View>
+  </TouchableHighlight>;
+
+Button.propTypes = {
+  children: PropTypes.string,
+  onPress: PropTypes.func,
+};
+```
+
+* Extract input
+```
+import React from 'react';
+import { StyleSheet, TextInput } from 'react-native';
+
+const styles = StyleSheet.create({
+  input: {
+    margin: 20,
+    height: 50,
+    borderColor: 'gray',
+    borderWidth: 1,
+  },
+});
+
+export const Input = () =>
+  <TextInput style={styles.input} />;
+```
+* Extract itemlist
+```
+import React, { PropTypes } from 'react';
+import { View, Text } from 'react-native';
+
+export const ItemList = props =>
+  <View>
+    {
+      props.items.map((item, index) =>
+        <Text key={index}>
+          {item.title}
+        </Text>
+      )
+    }
+  </View>;
+
+ItemList.propTypes = {
+  items: PropTypes.array.isRequired,
+};
+```
+* Simplify host
+
+## Slide 30
+Unidirectional data flow - Flux
+
+* Mention immutability
+* Mention Redux
+* Talk about why its simpler - and mention nightmares of two-way databinding
+
+## Slide 31
+Flux flow
+
+## Slide 32
+Flux flow part 2
+
+## Slide 33
+### DEMO - Tag 4
+
+* Add inputText to state
+```
+inputText: '',
+```
+
+* Map to input text
+  * Add propTypes for text property
+  * Add padding now that we see the text (not HMR again)
+  * Add onChangeText - talk about Unidirectional flow again
+    * In input
+      ```
+      import React, { PropTypes } from 'react';
+      import { StyleSheet, TextInput } from 'react-native';
+
+      const styles = StyleSheet.create({
+        input: {
+          margin: 20,
+          height: 50,
+          borderColor: 'gray',
+          borderWidth: 1,
+          padding: 10,
+        },
+      });
+
+      export const Input = props =>
+        <TextInput style={styles.input} value={props.text} onChangeText={props.onChangeText} />;
+
+      Input.propTypes = {
+        text: PropTypes.string.isRequired,
+        onChangeText: PropTypes.func.isRequired,
+      };
+      ```
+
+    * In Host
+      * start as () {} syntax first
+      * note { property } syntax
+      ```
+      onInputChangeText = (inputText) => {
+        this.setState({ inputText });
+      }
+      ```
+    * show error, explain whats happening and show .bind or = () => syntax
+
+* Add button press handler
+  * note ...
+  * note reset of text
+```
+onButtonPress = () => {
+  this.setState({
+    items: [
+      ...this.state.items,
+      { title: this.state.inputText },
+    ],
+    inputText: '',
+  });
+}
+```
+
+## Slide 34
 Redux
-
-# DEMO - TODO
-
-## Slide 19
-Composition
-
-# DEMO - TODO
+Redux Form
+Redux Observable
 
 -------------------
 
-## Slide 19
+## Slide 35
 Cross platform - oh yeah that :)
+* So we have already seen shared code
+* show current state running in both
 
-## Slide 20
-Shared code
+## Slide 36
+Cover all the ways you can support cross plaform
 
-## Slide 22
-When you need to be platform specific
+## Slide 37
+### Demo - Tag 5
 
-## Slide 22
-When you need to go to the metal
+#### Step 1 - Show Platform again
+* prepend platform on input
+  * note string interpolation
+  ```
+  { title: `${Platform.OS}: ${this.state.inputText}` },
+  ```
+
+#### Step 2 - Show Split files
+* add button.android.js
+* Invert Colors on android button
 
 -------------------
 
-## Slide 23
+## Slide 38
 More Learning - Wait there's more
 
 ## Slide 24
