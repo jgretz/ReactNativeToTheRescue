@@ -437,7 +437,19 @@ Cover all the ways you can support cross plaform
 -------------------
 
 ## Slide 38
-More Learning - Wait there's more
+One more thing - a couple of tools that
+can make you faster and better looking
 
-## Slide 24
+## Slide 39
+BuddyBuild
+
+## Slide 40
+CodePush
+
+## Slide 41
+Pepperoni
+
+-------------------
+
+## Slide 42
 Thank you
