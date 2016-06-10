@@ -50,30 +50,62 @@ React Native History
 Others Opinions
 
 ## Slide 11
+Editors
+
+## Slide 12
 * Lets dive in
 * I'm a developer, its the foundation, lets start there
 
-## Slide 12
+## Slide 13
+Project Setup
+
+* Discuss CLI
+* react-native init <Project name>
+  * Can take a while (like 5 or more minutes)
+
+### Demo 0
+
+#### Step 1
+* Show resulting files
+* react-native run-ios
+* react-native run-android
+
+#### Step 2
+* Discuss npm start, the file host and how it all works together
+
+* Show running out of XCode
+* show running out of Android Studio
+
+#### Step 4
+* Show index.ios.js
+* Show index.android.js
+* Discuss how we bring them together
+
+## Slide 15
+JSX - Sample
+
+## Slide 16
+JSX - Meme
+
+## Slide 17
+JSX - Good points
+
+### Demo 1
+
+### Step 1
+* Show JSX - manipulate it a bit
+* Explain imports
+
+
+## Slide 15
 HMR
 
 * Start with Killer Feature
 * Corey House codemash story - KILLER feature
 * Relatively new to React native, stable around April 2016
-* Allows design and development to colaborate quickly, reduce risk
+* Allows design and development to collaborate quickly, reduce risk
 
 # DEMO - TODO
-
-## Slide 13-14
-Project Setup
-* Discuss CLI, Text Editor, IDE
-
-# DEMO - TODO
-
-## Slide 15
-JSX
-
-## Slide 16
-JSX - Positives
 
 # DEMO - TODO
 
