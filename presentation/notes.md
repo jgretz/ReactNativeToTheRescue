@@ -52,6 +52,8 @@ Others Opinions
 ## Slide 11
 Editors
 
+* Transition to the basics
+
 ## Slide 12,13
 Project Setup
 
